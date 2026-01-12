@@ -1,0 +1,5 @@
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\05\DeviceConnector\obj\Debug\net8.0\DeviceConnector.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\05\DeviceConnector\obj\Debug\net8.0\DeviceConnector.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\05\DeviceConnector\obj\Debug\net8.0\DeviceConnector.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\05\DeviceConnector\obj\Debug\net8.0\DeviceConnector.AssemblyInfo.cs
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\05\DeviceConnector\obj\Debug\net8.0\DeviceConnector.csproj.CoreCompileInputs.cache

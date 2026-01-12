@@ -1,0 +1,12 @@
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\bin\Debug\net8.0\DeviceConnector.deps.json
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\bin\Debug\net8.0\DeviceConnector.dll
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\bin\Debug\net8.0\DeviceConnector.pdb
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\obj\Debug\net8.0\DeviceConnector.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\obj\Debug\net8.0\DeviceConnector.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\obj\Debug\net8.0\DeviceConnector.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\obj\Debug\net8.0\DeviceConnector.AssemblyInfo.cs
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\obj\Debug\net8.0\DeviceConnector.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\obj\Debug\net8.0\DeviceConnector.dll
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\obj\Debug\net8.0\refint\DeviceConnector.dll
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\obj\Debug\net8.0\DeviceConnector.pdb
+C:\Users\pc\Desktop\OPCUA_CODE\26_01_12\07\DeviceConnector\obj\Debug\net8.0\ref\DeviceConnector.dll

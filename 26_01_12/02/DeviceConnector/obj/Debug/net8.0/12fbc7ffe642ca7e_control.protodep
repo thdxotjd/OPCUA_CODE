@@ -1,0 +1,2 @@
+obj\Debug\net8.0\Protos/Control.cs \
+obj\Debug\net8.0\Protos/ControlGrpc.cs: Protos/control.proto

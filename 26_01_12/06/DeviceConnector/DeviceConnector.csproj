@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;CS1573;CS1572</NoWarn>
+    <Description>ESP32 ModbusTCP - OPC UA - gRPC 통신 클래스 라이브러리 (ROS_ControlHub 통합)</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- OPC UA SDK -->
+    <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua" Version="1.5.374.126" />
+    <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua.Client" Version="1.5.374.126" />
+    
+    <!-- gRPC (ROS_ControlHub 통신용) -->
+    <PackageReference Include="Grpc.Net.Client" Version="2.59.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.25.1" />
+    <PackageReference Include="Grpc.Tools" Version="2.59.0" PrivateAssets="All" />
+    
+    <!-- SignalR (ROS_ControlHub 실시간 상태 수신용) -->
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.0" />
+    
+    <!-- ASP.NET Core DI (OPC UA SDK 호환 버전) -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+  </ItemGroup>
+
+  <!-- gRPC Proto 파일 컴파일 -->
+  <ItemGroup>
+    <Protobuf Include="Protos\control.proto" GrpcServices="Client" />
+  </ItemGroup>
+
+</Project>

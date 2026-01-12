@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package control;
+
+service ControlService {
+  // 개별 디바이스 상태 설정 (Execution/Stop)
+  rpc SetDeviceState (DeviceCommand) returns (DeviceResult);
+  
+  // 전체 디바이스 상태 설정
+  rpc SetAllDevicesState (GlobalCommand) returns (GlobalResult);
+
+  // AGV 이동 명령
+  rpc MoveAgv (AgvMoveCommand) returns (DeviceResult);
+}
+
+message DeviceCommand {
+  string device_id = 1;
+  string command = 2; // "start", "stop"
+  string payload_json = 3; // 추가 파라미터 (JSON)
+}
+
+message DeviceResult {
+  bool success = 1;
+  string message = 2;
+}
+
+message GlobalCommand {
+  string command = 1; // "start_all", "stop_all"
+}
+
+message GlobalResult {
+  bool success = 1;
+  string message = 2;
+  int32 affected_count = 3;
+}
+
+message AgvMoveCommand {
+  string device_id = 1;
+  string target_type = 2; // "coordinate", "point"
+  double x = 3;
+  double y = 4;
+  string point_name = 5; // "start", "end"
+}
