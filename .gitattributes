@@ -1,2 +1,17 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.vsidx
+*.cache
+
+# NuGet
+*.nuget.props
+*.nuget.targets
+*.nuget.g.props
+*.nuget.g.targets
+project.assets.json
+project.nuget.cache
+*.dgspec.json
