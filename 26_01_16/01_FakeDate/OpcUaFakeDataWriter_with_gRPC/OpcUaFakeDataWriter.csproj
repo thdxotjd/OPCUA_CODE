@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ROS_ControlHub.TestData</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- OPC UA Foundation 라이브러리 -->
+    <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua" Version="1.5.374.70" />
+    <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua.Client" Version="1.5.374.70" />
+    
+    <!-- gRPC 클라이언트 라이브러리 -->
+    <PackageReference Include="Grpc.Net.Client" Version="2.59.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.25.1" />
+    <PackageReference Include="Grpc.Tools" Version="2.59.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Proto 파일 (gRPC 클라이언트 생성) -->
+    <Protobuf Include="Protos\control.proto" GrpcServices="Client" />
+  </ItemGroup>
+
+</Project>

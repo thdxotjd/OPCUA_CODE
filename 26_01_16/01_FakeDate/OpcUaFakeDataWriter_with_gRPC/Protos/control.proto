@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option csharp_namespace = "Control";
+
+package control;
+
+// ROS_ControlHub gRPC 서비스 정의
+service ControlService {
+  // 단일 장비 상태 설정
+  rpc SetDeviceState (DeviceCommand) returns (DeviceResult);
+  
+  // 모든 장비 상태 설정
+  rpc SetAllDevicesState (GlobalCommand) returns (GlobalResult);
+  
+  // AGV 이동 명령
+  rpc MoveAgv (AgvMoveCommand) returns (DeviceResult);
+}
+
+// 장비 제어 명령
+message DeviceCommand {
+  string device_name = 1;     // 장비 이름 (ESP32_01, PLC_01, AGV_01, ROBOT_01)
+  string command = 2;         // 명령 (start, stop, reset, etc.)
+}
+
+// 전체 장비 명령
+message GlobalCommand {
+  string command = 1;         // 명령 (start, stop, reset, etc.)
+}
+
+// AGV 이동 명령
+message AgvMoveCommand {
+  string device_name = 1;     // AGV 장비 이름
+  double target_x = 2;        // 목표 X 좌표
+  double target_y = 3;        // 목표 Y 좌표
+}
+
+// 장비 제어 결과
+message DeviceResult {
+  bool success = 1;           // 성공 여부
+  string message = 2;         // 결과 메시지
+  string device_name = 3;     // 장비 이름
+}
+
+// 전체 장비 제어 결과
+message GlobalResult {
+  bool success = 1;           // 성공 여부
+  string message = 2;         // 결과 메시지
+}
