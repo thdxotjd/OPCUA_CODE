@@ -18,7 +18,7 @@
 * **데이터 구조 규칙 정의**: ChannelName,DeviceName,Tags[]형식의 구조 정의.
 * **gRPC 서버 에 데이터 전송**: 테스트용 가짜 데이터를 만들어 gRPC서버와 데이터 전송 테스트하였습니다.
 * 빌드 및 실행(dotnet restore -> dotnet build -> dotnet run)
-### **2026-01-16: OPCUA - gRPC 데이터 전송 **
+### 2026-01-16: OPCUA - gRPC 데이터 전송 
 * **데이터 구조 규칙 정의**: ChannelName,DeviceName,Tags[]형식의 구조 정의.
 * **gRPC 서버 에 데이터 전송**: AGV date를 ModbusTCP 통신을 통해 OPCUA와 데이터 Read/Write하고 gRPC서버에 데이터 전송 테스트
 * AGV 코드 수정으로 다음에 테스트할 예정
