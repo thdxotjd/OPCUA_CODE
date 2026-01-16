@@ -1,0 +1,223 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "OpcUaFakeDataWriter/1.0.0": {
+        "dependencies": {
+          "OPCFoundation.NetStandard.Opc.Ua": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Client": "1.5.374.70"
+        },
+        "runtime": {
+          "OpcUaFakeDataWriter.dll": {}
+        }
+      },
+      "BouncyCastle.Cryptography/2.4.0": {
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.4.0.33771"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
+          }
+        }
+      },
+      "OPCFoundation.NetStandard.Opc.Ua/1.5.374.70": {
+        "dependencies": {
+          "OPCFoundation.NetStandard.Opc.Ua.Bindings.Https": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Client": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Configuration": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Core": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Gds.Client.Common": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Gds.Server.Common": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Security.Certificates": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Server": "1.5.374.70"
+        }
+      },
+      "OPCFoundation.NetStandard.Opc.Ua.Bindings.Https/1.5.374.70": {
+        "dependencies": {
+          "OPCFoundation.NetStandard.Opc.Ua.Core": "1.5.374.70"
+        },
+        "runtime": {
+          "lib/net8.0/Opc.Ua.Bindings.Https.dll": {
+            "assemblyVersion": "1.5.374.0",
+            "fileVersion": "1.5.374.70"
+          }
+        }
+      },
+      "OPCFoundation.NetStandard.Opc.Ua.Client/1.5.374.70": {
+        "dependencies": {
+          "OPCFoundation.NetStandard.Opc.Ua.Configuration": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Core": "1.5.374.70"
+        },
+        "runtime": {
+          "lib/net8.0/Opc.Ua.Client.dll": {
+            "assemblyVersion": "1.5.374.0",
+            "fileVersion": "1.5.374.70"
+          }
+        }
+      },
+      "OPCFoundation.NetStandard.Opc.Ua.Configuration/1.5.374.70": {
+        "dependencies": {
+          "OPCFoundation.NetStandard.Opc.Ua.Core": "1.5.374.70"
+        },
+        "runtime": {
+          "lib/net8.0/Opc.Ua.Configuration.dll": {
+            "assemblyVersion": "1.5.374.0",
+            "fileVersion": "1.5.374.70"
+          }
+        }
+      },
+      "OPCFoundation.NetStandard.Opc.Ua.Core/1.5.374.70": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "OPCFoundation.NetStandard.Opc.Ua.Security.Certificates": "1.5.374.70"
+        },
+        "runtime": {
+          "lib/net8.0/Opc.Ua.Core.dll": {
+            "assemblyVersion": "1.5.374.0",
+            "fileVersion": "1.5.374.70"
+          }
+        }
+      },
+      "OPCFoundation.NetStandard.Opc.Ua.Gds.Client.Common/1.5.374.70": {
+        "dependencies": {
+          "OPCFoundation.NetStandard.Opc.Ua.Client": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Core": "1.5.374.70"
+        },
+        "runtime": {
+          "lib/net8.0/Opc.Ua.Gds.Client.Common.dll": {
+            "assemblyVersion": "1.5.374.0",
+            "fileVersion": "1.5.374.70"
+          }
+        }
+      },
+      "OPCFoundation.NetStandard.Opc.Ua.Gds.Server.Common/1.5.374.70": {
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.4.0",
+          "OPCFoundation.NetStandard.Opc.Ua.Core": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Server": "1.5.374.70"
+        },
+        "runtime": {
+          "lib/net8.0/Opc.Ua.Gds.Server.Common.dll": {
+            "assemblyVersion": "1.5.374.0",
+            "fileVersion": "1.5.374.70"
+          }
+        }
+      },
+      "OPCFoundation.NetStandard.Opc.Ua.Security.Certificates/1.5.374.70": {
+        "runtime": {
+          "lib/net8.0/Opc.Ua.Security.Certificates.dll": {
+            "assemblyVersion": "1.5.374.0",
+            "fileVersion": "1.5.374.70"
+          }
+        }
+      },
+      "OPCFoundation.NetStandard.Opc.Ua.Server/1.5.374.70": {
+        "dependencies": {
+          "OPCFoundation.NetStandard.Opc.Ua.Configuration": "1.5.374.70",
+          "OPCFoundation.NetStandard.Opc.Ua.Core": "1.5.374.70"
+        },
+        "runtime": {
+          "lib/net8.0/Opc.Ua.Server.dll": {
+            "assemblyVersion": "1.5.374.0",
+            "fileVersion": "1.5.374.70"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OpcUaFakeDataWriter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BouncyCastle.Cryptography/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SwXsAV3sMvAU/Nn31pbjhWurYSjJ+/giI/0n6tCrYoupEK34iIHCuk3STAd9fx8yudM85KkLSVdn951vTng/vQ==",
+      "path": "bouncycastle.cryptography/2.4.0",
+      "hashPath": "bouncycastle.cryptography.2.4.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
+    },
+    "OPCFoundation.NetStandard.Opc.Ua/1.5.374.70": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z24jtSpLl9s1MbsR54RgyT7qer2zponbuHFS5oUSQrpaiLBGOJDtVcj56JjNo1PAf2fPFRzm4r5bhxUSC0ZL6A==",
+      "path": "opcfoundation.netstandard.opc.ua/1.5.374.70",
+      "hashPath": "opcfoundation.netstandard.opc.ua.1.5.374.70.nupkg.sha512"
+    },
+    "OPCFoundation.NetStandard.Opc.Ua.Bindings.Https/1.5.374.70": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J1r7RNhg8+r2DSR4j+MNDYUv85f6z2JuGcR3TBYQ+K3M58ruLaSUIy5fYDpeVDBuN/biQZL5NhDeYRPCx7vQTA==",
+      "path": "opcfoundation.netstandard.opc.ua.bindings.https/1.5.374.70",
+      "hashPath": "opcfoundation.netstandard.opc.ua.bindings.https.1.5.374.70.nupkg.sha512"
+    },
+    "OPCFoundation.NetStandard.Opc.Ua.Client/1.5.374.70": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TiguVbV6kANLKqV8KUPzf89re/ng53ebq3xaLUJJTfg0NAYxZTmUGYGAULR8c/C9aVi6xM5MGAuq+ggf1jEl+A==",
+      "path": "opcfoundation.netstandard.opc.ua.client/1.5.374.70",
+      "hashPath": "opcfoundation.netstandard.opc.ua.client.1.5.374.70.nupkg.sha512"
+    },
+    "OPCFoundation.NetStandard.Opc.Ua.Configuration/1.5.374.70": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qai1Ieo+laEO6ARW/YNuAcS1W34KJYqcbg4gUEYMBvHUNvl1ACgp8lYbXkj34vJ9BlqHlT9nYM0W6ioynUbaAw==",
+      "path": "opcfoundation.netstandard.opc.ua.configuration/1.5.374.70",
+      "hashPath": "opcfoundation.netstandard.opc.ua.configuration.1.5.374.70.nupkg.sha512"
+    },
+    "OPCFoundation.NetStandard.Opc.Ua.Core/1.5.374.70": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zOrqHMkHm5Pf9oFbRgscr5smU0Jx54l3ARGJcBQugbb2r+O53PPR8C/y1a+8FtI4Lx/feDB2qgjwZ8xqzSfuXQ==",
+      "path": "opcfoundation.netstandard.opc.ua.core/1.5.374.70",
+      "hashPath": "opcfoundation.netstandard.opc.ua.core.1.5.374.70.nupkg.sha512"
+    },
+    "OPCFoundation.NetStandard.Opc.Ua.Gds.Client.Common/1.5.374.70": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Uvx/NlKgQqSUOtiqn/Yj3G4GKL9VDlscypEc71JgP0VQSpCgmC9GFdfjSnIxMaM73amPCbhBUwb/MFfC3NnTOQ==",
+      "path": "opcfoundation.netstandard.opc.ua.gds.client.common/1.5.374.70",
+      "hashPath": "opcfoundation.netstandard.opc.ua.gds.client.common.1.5.374.70.nupkg.sha512"
+    },
+    "OPCFoundation.NetStandard.Opc.Ua.Gds.Server.Common/1.5.374.70": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-i4FJ2Dv1xMr652uN7+0ZVVxhRPWFSOwQsj8GB1ENsD7jKu0b21rYHL07J4IVlefKce/wit60MrjYsnIUJixcXA==",
+      "path": "opcfoundation.netstandard.opc.ua.gds.server.common/1.5.374.70",
+      "hashPath": "opcfoundation.netstandard.opc.ua.gds.server.common.1.5.374.70.nupkg.sha512"
+    },
+    "OPCFoundation.NetStandard.Opc.Ua.Security.Certificates/1.5.374.70": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hBCW2MAOX+BJmzVOekOCBLiSYNGz5hDJM/JEvGyaCqJ4dTv3D5/Fgi4y9NgquuY2pOd9bd9mOWjGgdW9ZQdJOg==",
+      "path": "opcfoundation.netstandard.opc.ua.security.certificates/1.5.374.70",
+      "hashPath": "opcfoundation.netstandard.opc.ua.security.certificates.1.5.374.70.nupkg.sha512"
+    },
+    "OPCFoundation.NetStandard.Opc.Ua.Server/1.5.374.70": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R2668QFblxxFBDqvyZplJNcB2b4ckDKUPaRpUa+oOy+1eHwAmKlkM2Bvs13kXmELXhlZ1BN56W0vM0ff3HC6BQ==",
+      "path": "opcfoundation.netstandard.opc.ua.server/1.5.374.70",
+      "hashPath": "opcfoundation.netstandard.opc.ua.server.1.5.374.70.nupkg.sha512"
+    }
+  }
+}

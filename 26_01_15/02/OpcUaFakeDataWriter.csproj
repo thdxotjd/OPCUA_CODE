@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ROS_ControlHub.TestData</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- OPC UA Foundation 라이브러리 -->
+    <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua" Version="1.5.374.70" />
+    <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua.Client" Version="1.5.374.70" />
+  </ItemGroup>
+
+</Project>
