@@ -14,6 +14,14 @@
 * **데이터 스트리밍**: 구독(Subscription) 모델을 적용하여 하드웨어의 위치(Position), 속도(Speed), 상태(Status) 데이터를 실시간으로 전송받는 기능을 구현하였습니다.
 * **RobotDK 연동 테스트**: 외부 시뮬레이션 툴인 RobotDK의 OPC UA Method를 활용하여 데이터 전송 테스트하였습니다.
 * **비동기 제어 로직**: WriteTagAsync 메서드를 통해 하드웨어 파라미터를 실시간으로 변경하는 제어 기능을 추가하고 검증하였습니다.
+### **2026-01-15: OPCUA 데이터 전송 (테스트 용도)**
+* **데이터 구조 규칙 정의**: ChannelName,DeviceName,Tags[]형식의 구조 정의.
+* **gRPC 서버 에 데이터 전송**: 테스트용 가짜 데이터를 만들어 gRPC서버와 데이터 전송 테스트하였습니다.
+* 빌드 및 실행(dotnet restore -> dotnet build -> dotnet run)
+### **2026-01-16: OPCUA - gRPC 데이터 전송 **
+* **데이터 구조 규칙 정의**: ChannelName,DeviceName,Tags[]형식의 구조 정의.
+* **gRPC 서버 에 데이터 전송**: AGV date를 ModbusTCP 통신을 통해 OPCUA와 데이터 Read/Write하고 gRPC서버에 데이터 전송 테스트
+* AGV 코드 수정으로 다음에 테스트할 예정
 
 <br>
 
