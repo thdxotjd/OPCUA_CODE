@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeviceConnector</name>
+    </assembly>
+    <members>
+        <member name="T:DeviceConnector.Events.DataChangedEventArgs">
+            <summary>
+            데이터 변경 이벤트 인자
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Events.DataChangedEventArgs.DeviceId">
+            <summary>
+            디바이스 ID
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Events.DataChangedEventArgs.Data">
+            <summary>
+            변경된 ESP32 데이터
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Events.DataChangedEventArgs.ChangedTags">
+            <summary>
+            변경된 태그 이름 목록
+            </summary>
+        </member>
+        <member name="T:DeviceConnector.Events.ConnectionChangedEventArgs">
+            <summary>
+            연결 상태 변경 이벤트 인자
+            </summary>
+        </member>
+        <member name="T:DeviceConnector.Events.WriteCompletedEventArgs">
+            <summary>
+            쓰기 완료 이벤트 인자
+            </summary>
+        </member>
+        <member name="T:DeviceConnector.Extensions.ServiceCollectionExtensions">
+            <summary>
+            서비스 컬렉션 확장 메서드
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Extensions.ServiceCollectionExtensions.AddDeviceConnector(Microsoft.Extensions.DependencyInjection.IServiceCollection,DeviceConnector.Models.OpcUaConnectionInfo)">
+            <summary>
+            DeviceConnector 서비스 등록 (설정 객체 직접 전달)
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Extensions.ServiceCollectionExtensions.AddDeviceConnector(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.String)">
+            <summary>
+            DeviceConnector 서비스 등록 (IConfiguration 사용)
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Extensions.ServiceCollectionExtensions.AddDeviceConnector(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{DeviceConnector.Models.OpcUaConnectionInfo})">
+            <summary>
+            DeviceConnector 서비스 등록 (Action 설정)
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Extensions.ServiceCollectionExtensions.AddDeviceConnectorWithDevices(Microsoft.Extensions.DependencyInjection.IServiceCollection,DeviceConnector.Models.OpcUaConnectionInfo,DeviceConnector.Models.DeviceTagConfig[])">
+            <summary>
+            디바이스 설정과 함께 DeviceConnector 등록
+            </summary>
+        </member>
+        <member name="T:DeviceConnector.Interfaces.IOpcUaClientService">
+            <summary>
+            OPC UA 클라이언트 서비스 인터페이스
+            KEPServerEX를 통한 ESP32 ModbusTCP 디바이스 통신
+            </summary>
+        </member>
+        <member name="E:DeviceConnector.Interfaces.IOpcUaClientService.DataChanged">
+            <summary>
+            데이터 변경 이벤트 (구독 시 발생)
+            </summary>
+        </member>
+        <member name="E:DeviceConnector.Interfaces.IOpcUaClientService.ConnectionChanged">
+            <summary>
+            연결 상태 변경 이벤트
+            </summary>
+        </member>
+        <member name="E:DeviceConnector.Interfaces.IOpcUaClientService.WriteCompleted">
+            <summary>
+            쓰기 완료 이벤트
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Interfaces.IOpcUaClientService.IsConnected">
+            <summary>
+            연결 상태
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Interfaces.IOpcUaClientService.Status">
+            <summary>
+            현재 연결 상태 정보
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.ConnectAsync(System.Threading.CancellationToken)">
+            <summary>
+            OPC UA 서버 연결
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.DisconnectAsync">
+            <summary>
+            OPC UA 서버 연결 해제
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.AddDeviceConfig(DeviceConnector.Models.DeviceTagConfig)">
+            <summary>
+            디바이스 설정 추가
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.RemoveDeviceConfig(System.String)">
+            <summary>
+            디바이스 설정 제거
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.GetRegisteredDeviceIds">
+            <summary>
+            등록된 모든 디바이스 ID 반환
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.ReadDeviceDataAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            디바이스 데이터 읽기 (전체 태그)
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.ReadPositionAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            위치 데이터만 읽기 (POS_X, POS_Y, POS_T)
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.ReadStateAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            State 읽기 (String) - Read/Write 가능
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.WriteTargetAAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            TargetA 쓰기 (Boolean)
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.WriteControlAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Control 쓰기 (String)
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.WriteStateAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            State 쓰기 (String)
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.WriteMultipleAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)">
+            <summary>
+            여러 태그 동시 쓰기
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.StartSubscriptionAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            디바이스 구독 시작 (실시간 데이터 수신)
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.StopSubscriptionAsync(System.String)">
+            <summary>
+            디바이스 구독 중지
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.StartAllSubscriptionsAsync(System.Threading.CancellationToken)">
+            <summary>
+            모든 디바이스 구독 시작
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Interfaces.IOpcUaClientService.StopAllSubscriptionsAsync">
+            <summary>
+            모든 구독 중지
+            </summary>
+        </member>
+        <member name="T:DeviceConnector.Models.ESP32Data">
+            <summary>
+            ESP32 디바이스 데이터 모델
+            KEPServerEX Tag Map (ModbusTCP.ESP32_01):
+            - POS_X:   40001 (Float) - Read Only
+            - POS_Y:   40003 (Float) - Read Only
+            - POS_T:   40005 (Float) - Read Only
+            - TargetA: 40007.0 (Boolean) - Write
+            - Control: 40100.20H (String) - Write
+            - State:   40200.20H (String) - Write
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.ESP32Data.DeviceId">
+            <summary>
+            디바이스 ID (예: "ESP32_01")
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.ESP32Data.ChannelName">
+            <summary>
+            채널 이름 (예: "ModbusTCP")
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.ESP32Data.DeviceName">
+            <summary>
+            디바이스 이름 (예: "ESP32_01")
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.ESP32Data.PosX">
+            <summary>
+            X 좌표 (단위: m)
+            Modbus 주소: 40001-40002 (Float)
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.ESP32Data.PosY">
+            <summary>
+            Y 좌표 (단위: m)
+            Modbus 주소: 40003-40004 (Float)
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.ESP32Data.PosT">
+            <summary>
+            방향각 (단위: degree)
+            Modbus 주소: 40005-40006 (Float)
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.ESP32Data.TargetA">
+            <summary>
+            목표 도달 플래그
+            Modbus 주소: 40007.0 (Boolean)
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.ESP32Data.Control">
+            <summary>
+            제어 명령 문자열
+            Modbus 주소: 40100.20H (String, 20 bytes)
+            예: "MOVE", "STOP", "RESET"
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.ESP32Data.State">
+            <summary>
+            상태 문자열 (Read/Write)
+            Modbus 주소: 40200.20H (String, 20 bytes)
+            예: "IDLE", "MOVING", "ARRIVED", "ERROR"
+            ESP32에서 Write, OPC UA에서도 Read/Write 가능
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.ESP32Data.Timestamp">
+            <summary>
+            데이터 수집 시간 (UTC)
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.ESP32Data.IsGoodQuality">
+            <summary>
+            데이터 품질
+            </summary>
+        </member>
+        <member name="T:DeviceConnector.Models.ESP32Tags">
+            <summary>
+            ESP32 태그 이름 상수
+            </summary>
+        </member>
+        <member name="F:DeviceConnector.Models.ESP32Tags.AllTags">
+            <summary>
+            모든 태그 이름 배열
+            </summary>
+        </member>
+        <member name="F:DeviceConnector.Models.ESP32Tags.ReadOnlyTags">
+            <summary>
+            Read Only 태그 배열 (ESP32 → OPC UA)
+            </summary>
+        </member>
+        <member name="F:DeviceConnector.Models.ESP32Tags.WriteOnlyTags">
+            <summary>
+            Write Only 태그 배열 (OPC UA → ESP32)
+            </summary>
+        </member>
+        <member name="F:DeviceConnector.Models.ESP32Tags.ReadWriteTags">
+            <summary>
+            Read/Write 가능 태그 배열
+            </summary>
+        </member>
+        <member name="F:DeviceConnector.Models.ESP32Tags.WritableTags">
+            <summary>
+            Write 가능한 모든 태그 배열
+            </summary>
+        </member>
+        <member name="T:DeviceConnector.Models.OpcUaConnectionInfo">
+            <summary>
+            OPC UA 연결 정보
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.OpcUaConnectionInfo.EndpointUrl">
+            <summary>
+            OPC UA 서버 엔드포인트 URL
+            예: "opc.tcp://192.168.0.19:49320"
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.OpcUaConnectionInfo.ApplicationName">
+            <summary>
+            애플리케이션 이름
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.OpcUaConnectionInfo.SessionTimeout">
+            <summary>
+            세션 타임아웃 (ms)
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.OpcUaConnectionInfo.PublishingIntervalMs">
+            <summary>
+            구독 발행 간격 (ms)
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.OpcUaConnectionInfo.AutoReconnect">
+            <summary>
+            자동 재연결 활성화
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.OpcUaConnectionInfo.ReconnectIntervalMs">
+            <summary>
+            재연결 간격 (ms)
+            </summary>
+        </member>
+        <member name="T:DeviceConnector.Models.DeviceTagConfig">
+            <summary>
+            디바이스 태그 설정
+            DeviceName, ChannelName, Tags 구조 사용 (2026-02-28까지 유지)
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.DeviceTagConfig.DeviceId">
+            <summary>
+            디바이스 식별자
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.DeviceTagConfig.ChannelName">
+            <summary>
+            KEPServerEX 채널 이름
+            예: "ModbusTCP"
+            </summary>
+        </member>
+        <member name="P:DeviceConnector.Models.DeviceTagConfig.DeviceName">
+            <summary>
+            KEPServerEX 디바이스 이름
+            예: "ESP32_01"
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Models.DeviceTagConfig.GetNodeId(System.String)">
+            <summary>
+            OPC UA NodeId 생성
+            형식: ns=2;s=ChannelName.DeviceName.TagName
+            </summary>
+        </member>
+        <member name="M:DeviceConnector.Models.DeviceTagConfig.GetAllNodeIds">
+            <summary>
+            모든 태그의 NodeId 딕셔너리 반환
+            </summary>
+        </member>
+        <member name="T:DeviceConnector.Models.ConnectionStatus">
+            <summary>
+            연결 상태 정보
+            </summary>
+        </member>
+        <member name="T:DeviceConnector.Services.OpcUaClientService">
+            <summary>
+            OPC UA 클라이언트 서비스 구현
+            KEPServerEX를 통한 ESP32 ModbusTCP 통신
+            </summary>
+        </member>
+    </members>
+</doc>
